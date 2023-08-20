@@ -1,3 +1,6 @@
-- name: "Install main qutebrowser application"
+- name: "Install qutebrowser"
   ansible.builtin.include_tasks: install/main.yml
+
+- name: "Configure qutebrowser"
+  ansible.builtin.include_tasks: configure/main.yml
 

@@ -55,6 +55,8 @@ Install and configure the qutebrowser web-browser.
          ansible.builtin.include_role:
            name: ans_role_config_qutebrowser
            public: yes
+        vars:
+           qutebrowser_user_name: "user2"
    ```
 
 ## Role Options
@@ -62,6 +64,10 @@ Install and configure the qutebrowser web-browser.
 See the role `defaults` files for main role vars listings:
 
   * [defaults](../defaults/main/)
+
+Define these _required_ vars for the role:
+
+  * `qutebrowser_user_name`: user name of main qutebrowser user
 
 ## Contributing
 

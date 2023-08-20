@@ -1,0 +1,7 @@
+# whether quitting qutebrowser requires a confirmation
+#   always: always show a confirmation
+#   multiple-tabs: show a confirmation if multiple tabs are opened
+#   downloads: show a confirmation if downloads are running
+#   never: never show a confirmation
+confirm_quit_qutebrowser: 'downloads'
+

@@ -1,0 +1,6 @@
+# main qutebrowser config dir
+qutebrowser_user_config_dir: "/home/{{ qutebrowser_user_name }}/.config/qutebrowser"
+
+# main qutebrowser config file path
+qutebrowser_user_config_file_path: "{{ qutebrowser_user_config_dir }}/config.py"
+
