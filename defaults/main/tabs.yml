@@ -1,0 +1,6 @@
+# which tab to select when the focused tab is removed
+#  prev: select the tab which came before the closed one (left in horizontal, above in vertical)
+#  next: select the tab which came after the closed one (right in horizontal, below in vertical)
+#  last-used: select the previously selected tab
+qutebrowser_tab_select_on_remove: 'last-used'
+

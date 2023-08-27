@@ -28,3 +28,10 @@ config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs e
 # default monospace font
 config.set('fonts.default_family', ['{{ qutebrowser_default_monospace_font }}'])
 
+################################################################################
+# TABS
+################################################################################
+
+# which tab to select when the focused tab is removed
+config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
+
