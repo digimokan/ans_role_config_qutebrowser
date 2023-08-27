@@ -3,6 +3,7 @@
 # ANSIBLE-MANAGED CONFIGURATION FILE
 # Set Up:      https://qutebrowser.org/doc/help/configuring.html
 # All Options: https://qutebrowser.org/doc/help/settings.html
+
 ################################################################################
 # CONFIG SOURCES
 ################################################################################
@@ -16,4 +17,11 @@ config.load_autoconfig(False)
 
 # when to confirm quitting qutebrowser
 config.set('confirm_quit', ['{{ confirm_quit_qutebrowser }}'])
+
+################################################################################
+# FONTS
+################################################################################
+
+# default monospace font
+config.set('fonts.default_family', ['{{ qutebrowser_default_monospace_font }}'])
 
