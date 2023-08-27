@@ -1,3 +1,7 @@
 # default monospace font
-qutebrowser_default_monospace_font: "monospace"
+qutebrowser_default_monospace_font_family: "monospace"
+
+# font for select tab and unselected tabs
+qutebrowser_selected_tab_font: "sans-serif 16"
+qutebrowser_unselected_tabs_font: "sans-serif 16"
 
