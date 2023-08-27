@@ -5,3 +5,6 @@ qutebrowser_default_monospace_font_family: "monospace"
 qutebrowser_selected_tab_font: "sans-serif 16"
 qutebrowser_unselected_tabs_font: "sans-serif 16"
 
+# font for prompts
+qutebrowser_prompt_font: "serif 14"
+
