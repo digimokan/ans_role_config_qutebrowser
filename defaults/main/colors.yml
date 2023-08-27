@@ -1,0 +1,7 @@
+# tab-bar colors
+qutebrowser_tab_bar_bg_color: "#2F343F"
+qutebrowser_tab_bar_active_tab_bg_color: "#4E4E4E"
+qutebrowser_tab_bar_active_tab_fg_color: "#F0F0F0"
+qutebrowser_tab_bar_inactive_tab_bg_color: "#383C4A"
+qutebrowser_tab_bar_inactive_tab_fg_color: "#A8A8A8"
+

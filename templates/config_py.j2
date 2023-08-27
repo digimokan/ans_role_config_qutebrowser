@@ -28,13 +28,28 @@ config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs e
 # default monospace font
 config.set('fonts.default_family', ['{{ qutebrowser_default_monospace_font_family }}'])
 
+# font for active and inactive tabs
+config.set('fonts.tabs.selected', '{{ qutebrowser_tab_bar_font }}')
+config.set('fonts.tabs.unselected', '{{ qutebrowser_tab_bar_font }}')
+
+################################################################################
+# COLORS
+################################################################################
+
+# tab-bar colors
+config.set('colors.tabs.bar.bg', '{{ qutebrowser_tab_bar_bg_color }}')
+config.set('colors.tabs.selected.even.bg', '{{ qutebrowser_tab_bar_active_tab_bg_color }}')
+config.set('colors.tabs.selected.odd.bg', '{{ qutebrowser_tab_bar_active_tab_bg_color }}')
+config.set('colors.tabs.selected.even.fg', '{{ qutebrowser_tab_bar_active_tab_fg_color }}')
+config.set('colors.tabs.selected.odd.fg', '{{ qutebrowser_tab_bar_active_tab_fg_color }}')
+config.set('colors.tabs.even.bg', '{{ qutebrowser_tab_bar_inactive_tab_bg_color }}')
+config.set('colors.tabs.odd.bg', '{{ qutebrowser_tab_bar_inactive_tab_bg_color }}')
+config.set('colors.tabs.even.fg', '{{ qutebrowser_tab_bar_inactive_tab_fg_color }}')
+config.set('colors.tabs.odd.fg', '{{ qutebrowser_tab_bar_inactive_tab_fg_color }}')
+
 ################################################################################
 # TABS
 ################################################################################
-
-# font for select tab and unselected tabs
-config.set('fonts.tabs.selected', '{{ qutebrowser_selected_tab_font }}')
-config.set('fonts.tabs.unselected', '{{ qutebrowser_unselected_tabs_font }}')
 
 # which tab to select when the focused tab is removed
 config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
