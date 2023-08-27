@@ -16,7 +16,10 @@ config.load_autoconfig(False)
 ################################################################################
 
 # when to confirm quitting qutebrowser
-config.set('confirm_quit', ['{{ confirm_quit_qutebrowser }}'])
+config.set('confirm_quit', ['{{ qutebrowser_confirm_quit }}'])
+
+# save open tabs, and restore them on next qutebrowser session
+config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs else 'False' }})
 
 ################################################################################
 # FONTS
