@@ -2,8 +2,8 @@
 qutebrowser_default_monospace_font_family: "monospace"
 
 # font for tabs
-qutebrowser_tab_bar_font: "sans-serif 16"
+qutebrowser_tab_bar_font: "16pt sans-serif"
 
 # font for prompts
-qutebrowser_prompt_font: "serif 14"
+qutebrowser_prompt_font: "14pt serif"
 
