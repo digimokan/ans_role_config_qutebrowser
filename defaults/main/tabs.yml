@@ -4,3 +4,9 @@
 #  last-used: select the previously selected tab
 qutebrowser_tab_select_on_remove: 'last-used'
 
+# padding around title/text in each tab, in points
+qutebrowser_tab_text_padding_top_pts: 5
+qutebrowser_tab_text_padding_bottom_pts: 5
+qutebrowser_tab_text_padding_left_pts: 5
+qutebrowser_tab_text_padding_right_pts: 5
+

@@ -51,3 +51,9 @@ config.set('colors.tabs.odd.fg', '{{ qutebrowser_tab_bar_inactive_tab_fg_color }
 # which tab to select when the focused tab is removed
 config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
 
+# padding around title/text in each tab, in points
+config.set('tabs.padding.top', {{ qutebrowser_tab_text_padding_top_pts }})
+config.set('tabs.padding.bottom', {{ qutebrowser_tab_text_padding_bottom_pts }})
+config.set('tabs.padding.left', {{ qutebrowser_tab_text_padding_left_pts }})
+config.set('tabs.padding.right', {{ qutebrowser_tab_text_padding_right_pts }})
+
