@@ -53,9 +53,12 @@ config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
 
 # padding around title/text in each tab, in points
 config.set('tabs.padding', {
-  'top': {{ qutebrowser_tab_text_padding_top_pts }},
-  'bottom': {{ qutebrowser_tab_text_padding_bottom_pts }},
-  'left': {{ qutebrowser_tab_text_padding_left_pts }},
-  'right': {{ qutebrowser_tab_text_padding_right_pts }}
+  'top': {{ qutebrowser_tab_text_padding_top_px }},
+  'bottom': {{ qutebrowser_tab_text_padding_bottom_px }},
+  'left': {{ qutebrowser_tab_text_padding_left_px }},
+  'right': {{ qutebrowser_tab_text_padding_right_px }}
 })
+
+# vertical page-loading progress indicator bar placed to left of tab title text
+config.set('tabs.indicator.width', {{ qutebrowser_tab_indicator_bar_width_px }})
 
