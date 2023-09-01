@@ -7,3 +7,6 @@ qutebrowser_tab_bar_font: "16pt sans-serif"
 # font for prompts
 qutebrowser_prompt_font: "14pt serif"
 
+# font for hints
+qutebrowser_hints_font: "bold 14pt monospace"
+
