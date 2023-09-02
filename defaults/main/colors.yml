@@ -5,6 +5,13 @@ qutebrowser_tab_bar_active_tab_fg_color: "#F0F0F0"
 qutebrowser_tab_bar_inactive_tab_bg_color: "#383C4A"
 qutebrowser_tab_bar_inactive_tab_fg_color: "#A8A8A8"
 
+# completion window colors
+qutebrowser_completion_category_bg_color: "#383C4A"
+qutebrowser_completion_category_fg_color: "#EEEEEE"
+qutebrowser_completion_text_fg_color: "#CCCCCC"
+qutebrowser_completion_selected_row_bg_color: "#252525"
+qutebrowser_completion_selected_row_fg_color: "#CCCC01"
+
 # statusbar colors
 qutebrowser_statusbar_default_bg_color: "#292C33"
 qutebrowser_statusbar_default_fg_color: "#B9B9B9"
