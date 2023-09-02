@@ -25,16 +25,14 @@ config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs e
 # default monospace font
 config.set('fonts.default_family', ['{{ qutebrowser_default_monospace_font_family }}'])
 
-# font for active and inactive tabs
+# fonts for various UI elements
 config.set('fonts.tabs.selected', '{{ qutebrowser_tab_bar_font }}')
 config.set('fonts.tabs.unselected', '{{ qutebrowser_tab_bar_font }}')
-
-# font for hints
 config.set('fonts.hints', '{{ qutebrowser_hints_font }}')
 config.set('fonts.keyhint', '{{ qutebrowser_hints_font }}')
-
-# font for downloads bar
 config.set('fonts.downloads', '{{ qutebrowser_downloads_bar_font }}')
+config.set('fonts.completion.category', '{{ qutebrowser_completion_categories_font }}')
+config.set('fonts.completion.entry', '{{ qutebrowser_completion_text_font }}')
 
 ################################################################################
 # COLORS

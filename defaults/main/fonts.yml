@@ -1,15 +1,11 @@
 # default monospace font
 qutebrowser_default_monospace_font_family: "monospace"
 
-# font for tabs
+# fonts for various UI elements
 qutebrowser_tab_bar_font: "16pt sans-serif"
-
-# font for prompts
 qutebrowser_prompt_font: "14pt serif"
-
-# font for hints
 qutebrowser_hints_font: "bold 14pt monospace"
-
-# font for downloads bar
 qutebrowser_downloads_bar_font: "14pt monospace"
+qutebrowser_completion_categories_font: "bold 14pt sans-serif"
+qutebrowser_completion_text_font: "14pt sans-serif"
 
