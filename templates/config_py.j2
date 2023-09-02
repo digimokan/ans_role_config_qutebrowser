@@ -29,6 +29,13 @@ config.set('fonts.default_family', ['{{ qutebrowser_default_monospace_font_famil
 config.set('fonts.tabs.selected', '{{ qutebrowser_tab_bar_font }}')
 config.set('fonts.tabs.unselected', '{{ qutebrowser_tab_bar_font }}')
 
+# font for hints
+config.set('fonts.hints', '{{ qutebrowser_hints_font }}')
+config.set('fonts.keyhint', '{{ qutebrowser_hints_font }}')
+
+# font for downloads bar
+config.set('fonts.downloads', '{{ qutebrowser_downloads_bar_font }}')
+
 ################################################################################
 # COLORS
 ################################################################################
@@ -61,14 +68,6 @@ config.set('tabs.padding', {
 
 # vertical page-loading progress indicator bar placed to left of tab title text
 config.set('tabs.indicator.width', {{ qutebrowser_tab_indicator_bar_width_px }})
-
-################################################################################
-# HINTS
-################################################################################
-
-# font for hints
-config.set('fonts.hints', '{{ qutebrowser_hints_font }}')
-config.set('fonts.keyhint', '{{ qutebrowser_hints_font }}')
 
 ################################################################################
 # DOWNLOADS

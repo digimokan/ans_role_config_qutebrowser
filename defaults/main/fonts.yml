@@ -10,3 +10,6 @@ qutebrowser_prompt_font: "14pt serif"
 # font for hints
 qutebrowser_hints_font: "bold 14pt monospace"
 
+# font for downloads bar
+qutebrowser_downloads_bar_font: "14pt monospace"
+
