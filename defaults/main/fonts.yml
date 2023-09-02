@@ -1,8 +1,17 @@
-# fonts for various UI elements
-qutebrowser_tab_bar_font: "16pt sans-serif"
-qutebrowser_prompt_font: "14pt serif"
-qutebrowser_hints_font: "bold 14pt monospace"
-qutebrowser_downloads_bar_font: "14pt monospace"
-qutebrowser_completion_categories_font: "bold 14pt sans-serif"
-qutebrowser_completion_text_font: "14pt sans-serif"
+# font families used for various UI elements
+qutebrowser_sans_font_family: "sans-serif"
+qutebrowser_serif_font_family: "serif"
+qutebrowser_mono_font_family: "monospace"
+
+# font style/size for UI elements configured to use the Sans family
+qutebrowser_tab_bar_font_style_size: "16pt"
+qutebrowser_completion_categories_font_style_size: "bold 14pt"
+qutebrowser_completion_text_font_style_size: "14pt"
+
+# font style/size for UI elements configured to use the Serif font family
+qutebrowser_prompt_font_style_size: "14pt"
+
+# font style/size for UI elements configured to use the Mono family
+qutebrowser_hints_font_style_size: "bold 14pt"
+qutebrowser_downloads_bar_font_style_size: "14pt"
 

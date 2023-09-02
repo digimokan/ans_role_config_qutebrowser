@@ -22,14 +22,19 @@ config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs e
 # FONTS
 ################################################################################
 
-# fonts for various UI elements
-config.set('fonts.tabs.selected', '{{ qutebrowser_tab_bar_font }}')
-config.set('fonts.tabs.unselected', '{{ qutebrowser_tab_bar_font }}')
-config.set('fonts.hints', '{{ qutebrowser_hints_font }}')
-config.set('fonts.keyhint', '{{ qutebrowser_hints_font }}')
-config.set('fonts.downloads', '{{ qutebrowser_downloads_bar_font }}')
-config.set('fonts.completion.category', '{{ qutebrowser_completion_categories_font }}')
-config.set('fonts.completion.entry', '{{ qutebrowser_completion_text_font }}')
+# fonts for Sans UI elements
+config.set('fonts.tabs.selected', '{{ qutebrowser_tab_bar_font_style_size }} {{ qutebrowser_sans_font_family }}')
+config.set('fonts.tabs.unselected', '{{ qutebrowser_tab_bar_font_style_size }} {{ qutebrowser_sans_font_family }}')
+config.set('fonts.completion.category', '{{ qutebrowser_completion_categories_font_style_size }} {{ qutebrowser_sans_font_family }}')
+config.set('fonts.completion.entry', '{{ qutebrowser_completion_text_font_style_size }} {{ qutebrowser_sans_font_family }}')
+
+# fonts for Serif UI elements
+config.set('fonts.prompts', '{{ qutebrowser_prompt_font_style_size }} {{ qutebrowser_serif_font_family }}')
+
+# fonts for Mono UI elements
+config.set('fonts.hints', '{{ qutebrowser_hints_font_style_size }} {{ qutebrowser_mono_font_family }}')
+config.set('fonts.keyhint', '{{ qutebrowser_hints_font_style_size }} {{ qutebrowser_mono_font_family }}')
+config.set('fonts.downloads', '{{ qutebrowser_downloads_bar_font_style_size }} {{ qutebrowser_mono_font_family }}')
 
 ################################################################################
 # COLORS
