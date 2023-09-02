@@ -5,3 +5,13 @@ qutebrowser_tab_bar_active_tab_fg_color: "#F0F0F0"
 qutebrowser_tab_bar_inactive_tab_bg_color: "#383C4A"
 qutebrowser_tab_bar_inactive_tab_fg_color: "#A8A8A8"
 
+# statusbar colors
+qutebrowser_statusbar_default_bg_color: "#292C33"
+qutebrowser_statusbar_default_fg_color: "#B9B9B9"
+qutebrowser_statusbar_url_fg_color: "#B9B9B9"
+qutebrowser_statusbar_url_https_fg_color: "#75B075"
+qutebrowser_statusbar_url_http_fg_color: "#D65D0E"
+qutebrowser_statusbar_url_warn_fg_color: "#FABD2F"
+qutebrowser_statusbar_url_error_fg_color: "#CC241D"
+qutebrowser_statusbar_url_hover_fg_color: "#98BFC5"
+
