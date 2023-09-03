@@ -57,7 +57,9 @@ config.set('colors.tabs.even.fg', '{{ qutebrowser_tab_bar_inactive_tab_fg_color 
 config.set('colors.tabs.odd.fg', '{{ qutebrowser_tab_bar_inactive_tab_fg_color }}')
 
 # completion window colors
-config.set('colors.completion.category.bg', 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {{ qutebrowser_completion_category_bg_color }}, stop:1 #505050)')
+config.set(
+  'colors.completion.category.bg',
+  'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 {{ qutebrowser_completion_category_bg_color }}, stop:1 #505050)')
 config.set('colors.completion.category.fg', '{{ qutebrowser_completion_category_fg_color }}')
 config.set('colors.completion.fg', '{{ qutebrowser_completion_text_fg_color }}')
 config.set('colors.completion.item.selected.bg', '{{ qutebrowser_completion_selected_row_bg_color }}')
