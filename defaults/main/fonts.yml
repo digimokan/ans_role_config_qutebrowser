@@ -16,4 +16,5 @@ qutebrowser_hints_font_style_size: "bold 14pt"
 qutebrowser_downloads_bar_font_style_size: "14pt"
 qutebrowser_statusbar_url_font_style_size: "14pt"
 qutebrowser_statusbar_messages_font_style_size: "14pt"
+qutebrowser_debug_console_font_style_size: "14pt"
 
