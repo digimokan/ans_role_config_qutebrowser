@@ -14,5 +14,6 @@ qutebrowser_prompt_font_style_size: "14pt"
 # font style/size for UI elements configured to use the Mono family
 qutebrowser_hints_font_style_size: "bold 14pt"
 qutebrowser_downloads_bar_font_style_size: "14pt"
-qutebrowser_statusbar_font_style_size: "14pt"
+qutebrowser_statusbar_url_font_style_size: "14pt"
+qutebrowser_statusbar_messages_font_style_size: "14pt"
 
