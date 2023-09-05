@@ -41,6 +41,14 @@ config.set('fonts.messages.warning', '{{ qutebrowser_statusbar_messages_font }}'
 config.set('fonts.messages.error', '{{ qutebrowser_statusbar_messages_font }}')
 config.set('fonts.debug_console', '{{ qutebrowser_debug_console_font }}')
 
+# fonts used for web pages
+config.set('fonts.web.family.sans_serif', '{{ qutebrowser_sans_font_family }}')
+config.set('fonts.web.family.serif', '{{ qutebrowser_serif_font_family }}')
+config.set('fonts.web.family.fixed', '{{ qutebrowser_mono_font_family }}')
+config.set('fonts.web.family.standard', '{{ qutebrowser_serif_font_family }}')
+config.set('fonts.web.size.default', '{{ qutebrowser_web_text_font_size_pts }}')
+config.set('fonts.web.size.default_fixed', '{{ qutebrowser_web_text_font_size_pts }}')
+
 ################################################################################
 # COLORS
 ################################################################################
@@ -74,6 +82,9 @@ config.set('colors.statusbar.url.success.http.fg', '{{ qutebrowser_statusbar_url
 config.set('colors.statusbar.url.warn.fg', '{{ qutebrowser_statusbar_url_warn_fg_color }}')
 config.set('colors.statusbar.url.error.fg', '{{ qutebrowser_statusbar_url_error_fg_color }}')
 config.set('colors.statusbar.url.hover.fg', '{{ qutebrowser_statusbar_url_hover_fg_color }}')
+
+# web page colors
+config.set('colors.webpage.bg', '{{ qutebrowser_web_page_default_bg_color }}')
 
 ################################################################################
 # TABS

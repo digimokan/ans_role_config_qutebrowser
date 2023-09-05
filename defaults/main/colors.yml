@@ -22,3 +22,6 @@ qutebrowser_statusbar_url_warn_fg_color: "#FABD2F"
 qutebrowser_statusbar_url_error_fg_color: "#CC241D"
 qutebrowser_statusbar_url_hover_fg_color: "#98BFC5"
 
+# web page colors
+qutebrowser_web_page_default_bg_color: "#EEEEEE"
+
