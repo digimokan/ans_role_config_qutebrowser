@@ -3,18 +3,23 @@ qutebrowser_sans_font_family: "sans-serif"
 qutebrowser_serif_font_family: "serif"
 qutebrowser_mono_font_family: "monospace"
 
-# font style/size for UI elements configured to use the Sans family
-qutebrowser_tab_bar_font_style_size: "16pt"
-qutebrowser_completion_categories_font_style_size: "bold 14pt"
-qutebrowser_completion_text_font_style_size: "14pt"
+# font sizes used for various UI elements
+qutebrowser_title_font_size_pts: "16"
+qutebrowser_normal_text_font_size_pts: "14"
+qutebrowser_web_text_font_size_pts: "16"
 
-# font style/size for UI elements configured to use the Serif font family
-qutebrowser_prompt_font_style_size: "14pt"
+# font style/size/family for UI elements configured to use the Sans family
+qutebrowser_tab_bar_font: "{{ qutebrowser_title_font_size_pts }}pt {{ qutebrowser_sans_font_family }}"
+qutebrowser_completion_categories_font: "bold {{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_sans_font_family }}"
+qutebrowser_completion_text_font: "{{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_sans_font_family }}"
 
-# font style/size for UI elements configured to use the Mono family
-qutebrowser_hints_font_style_size: "bold 14pt"
-qutebrowser_downloads_bar_font_style_size: "14pt"
-qutebrowser_statusbar_url_font_style_size: "14pt"
-qutebrowser_statusbar_messages_font_style_size: "14pt"
-qutebrowser_debug_console_font_style_size: "14pt"
+# font style/size/family for UI elements configured to use the Serif font family
+qutebrowser_prompt_font: "{{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_serif_font_family }}"
+
+# font style/size/family for UI elements configured to use the Mono family
+qutebrowser_hints_font: "bold {{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_mono_font_family }}"
+qutebrowser_downloads_bar_font: "{{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_mono_font_family }}"
+qutebrowser_statusbar_url_font: "{{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_mono_font_family }}"
+qutebrowser_statusbar_messages_font: "{{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_mono_font_family }}"
+qutebrowser_debug_console_font: "{{ qutebrowser_normal_text_font_size_pts }}pt {{ qutebrowser_mono_font_family }}"
 
