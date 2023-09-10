@@ -155,3 +155,10 @@ config.set('tabs.close_mouse_button', '{{ qutebrowser_close_tab_with_mouse_btn }
 # switch between tabs using the mouse wheel
 config.set('tabs.mousewheel_switching', {{ 'True' if qutebrowser_switch_tabs_with_mouse_wheel else 'False' }})
 
+################################################################################
+# KEYMAPS
+################################################################################
+
+# clear all default keymaps
+config.set('bindings.default', {})
+
