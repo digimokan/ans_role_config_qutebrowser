@@ -146,3 +146,16 @@ config.set('completion.cmd_history_max_items', {{ qutebrowser_cmd_mode_history_m
 # shown on start, and when opening new tab without arguments
 config.set('url.default_page', '{{ qutebrowser_home_page }}')
 
+################################################################################
+# SEARCH
+################################################################################
+
+# list of hotkey-to-search-provider maps, used in cmd mode
+# Note: the first row in this list serves as the default provider
+config.set('url.searchengines', {
+  'DEFAULT': '{{ qutebrowser_search_providers[0].search_url | replace("%s", "{}") }}',
+{% for provider in qutebrowser_search_providers %}
+  '{{ provider.hotkeys }}': '{{ provider.search_url | replace("%s", "{}") }}',
+{% endfor %}
+})
+
