@@ -159,6 +159,16 @@ config.set('scrolling.bar', '{{ qutebrowser_show_scrollbar }}')
 config.set('url.default_page', '{{ qutebrowser_home_page }}')
 
 ################################################################################
+# MOUSE
+################################################################################
+
+# which mouse button to use to close tabs: 'right', 'middle', 'none'
+config.set('tabs.close_mouse_button', '{{ qutebrowser_close_tab_with_mouse_btn }}')
+
+# switch between tabs using the mouse wheel
+config.set('tabs.mousewheel_switching', {{ 'True' if qutebrowser_switch_tabs_with_mouse_wheel else 'False' }})
+
+################################################################################
 # SEARCH
 ################################################################################
 

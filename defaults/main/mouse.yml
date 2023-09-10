@@ -1,0 +1,6 @@
+# which mouse button to use to close tabs: 'right', 'middle', 'none'
+qutebrowser_close_tab_with_mouse_btn: 'none'
+
+# switch between tabs using the mouse wheel
+qutebrowser_switch_tabs_with_mouse_wheel: false
+
