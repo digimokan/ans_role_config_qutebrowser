@@ -155,7 +155,8 @@ config.set('scrolling.bar', '{{ qutebrowser_show_scrollbar }}')
 # UI
 ################################################################################
 
-# shown on start, and when opening new tab without arguments
+# page shown on start, and when opening new tab without arguments
+config.set('url.start_pages', ['{{ qutebrowser_home_page }}'])
 config.set('url.default_page', '{{ qutebrowser_home_page }}')
 
 # default page-zoom-level (see zoom.levels settings for available levels)
