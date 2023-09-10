@@ -8,3 +8,6 @@ qutebrowser_tab_select_on_remove: 'last-used'
 # sets width of indicator bar in pixels (0 to hide it)
 qutebrowser_tab_indicator_bar_width_px: 0
 
+# when a new tab is launched, open it in the background
+qutebrowser_open_new_tab_in_bg: false
+

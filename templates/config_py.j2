@@ -134,6 +134,9 @@ config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
 # vertical page-loading progress indicator bar placed to left of tab title text
 config.set('tabs.indicator.width', {{ qutebrowser_tab_indicator_bar_width_px }})
 
+# when a new tab is launched, open it in the background
+config.set('tabs.background', {{ 'True' if qutebrowser_open_new_tab_in_bg else 'False' }})
+
 ################################################################################
 # DOWNLOADS
 ################################################################################
