@@ -4,12 +4,6 @@
 #  last-used: select the previously selected tab
 qutebrowser_tab_select_on_remove: 'last-used'
 
-# padding around title/text in each tab, in pixels
-qutebrowser_tab_text_padding_top_px: 5
-qutebrowser_tab_text_padding_bottom_px: 5
-qutebrowser_tab_text_padding_left_px: 5
-qutebrowser_tab_text_padding_right_px: 5
-
 # vertical page-loading progress indicator bar placed to left of tab title text
 # sets width of indicator bar in pixels (0 to hide it)
 qutebrowser_tab_indicator_bar_width_px: 0

@@ -1,3 +1,9 @@
+# padding around title/text in each tab, in pixels
+qutebrowser_tab_text_padding_top_px: 5
+qutebrowser_tab_text_padding_bottom_px: 5
+qutebrowser_tab_text_padding_left_px: 5
+qutebrowser_tab_text_padding_right_px: 5
+
 # padding around statusbar at bottom of window, in pixels
 qutebrowser_statusbar_text_padding_top_px: 5
 qutebrowser_statusbar_text_padding_bottom_px: 5
