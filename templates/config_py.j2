@@ -111,6 +111,16 @@ config.set('statusbar.padding', {
 })
 
 ################################################################################
+# MODES
+################################################################################
+
+# number of items to save in cmd mode history (0 for none, -1 for unlimited)
+config.set('completion.cmd_history_max_items', {{ qutebrowser_cmd_mode_history_max_items }})
+
+# forward unbound keys to web page: 'all', 'none', 'auto' (fwd non-alphanumeric)
+config.set('input.forward_unbound_keys', '{{ qutebrowser_normal_mode_unbound_key_fwd }}')
+
+################################################################################
 # TABS
 ################################################################################
 
@@ -133,13 +143,6 @@ config.set('downloads.location.directory', '{{ qutebrowser_user_download_dir }}'
 
 # show a scrollbar
 config.set('scrolling.bar', '{{ qutebrowser_show_scrollbar }}')
-
-################################################################################
-# CMD MODE
-################################################################################
-
-# number of items to save in cmd mode history (0 for none, -1 for unlimited)
-config.set('completion.cmd_history_max_items', {{ qutebrowser_cmd_mode_history_max_items }})
 
 ################################################################################
 # UI
