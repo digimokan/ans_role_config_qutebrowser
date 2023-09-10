@@ -1,7 +1,0 @@
-# show a scrollbar
-#  always: always show
-#  never: never show
-#  when-searching: only show when searching
-#  overlay: show periodically when scrolling
-qutebrowser_show_scrollbar: 'always'
-

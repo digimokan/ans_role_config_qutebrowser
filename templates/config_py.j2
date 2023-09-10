@@ -12,11 +12,11 @@
 config.load_autoconfig(False)
 
 ################################################################################
-# SAVE / QUIT
+# PATHS
 ################################################################################
 
-# save open tabs, and restore them on next qutebrowser session
-config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs else 'False' }})
+# qutebrowser will download files to this directory
+config.set('downloads.location.directory', '{{ qutebrowser_user_download_dir }}')
 
 ################################################################################
 # FONTS
@@ -115,66 +115,31 @@ config.set('statusbar.padding', {
 })
 
 ################################################################################
-# MODES
+# SETTINGS
 ################################################################################
 
 # number of items to save in cmd mode history (0 for none, -1 for unlimited)
 config.set('completion.cmd_history_max_items', {{ qutebrowser_cmd_mode_history_max_items }})
-
 # forward unbound keys to web page: 'all', 'none', 'auto' (fwd non-alphanumeric)
 config.set('input.forward_unbound_keys', '{{ qutebrowser_normal_mode_unbound_key_fwd }}')
-
-################################################################################
-# TABS
-################################################################################
-
-# which tab to select when the focused tab is removed
-config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
-
-# vertical page-loading progress indicator bar placed to left of tab title text
-config.set('tabs.indicator.width', {{ qutebrowser_tab_indicator_bar_width_px }})
-
-# when a new tab is launched, open it in the background
-config.set('tabs.background', {{ 'True' if qutebrowser_open_new_tab_in_bg else 'False' }})
-
-################################################################################
-# DOWNLOADS
-################################################################################
-
-# qutebrowser will download files to this directory
-config.set('downloads.location.directory', '{{ qutebrowser_user_download_dir }}')
-
-################################################################################
-# SCROLLBAR
-################################################################################
-
-# show a scrollbar
-config.set('scrolling.bar', '{{ qutebrowser_show_scrollbar }}')
-
-################################################################################
-# UI
-################################################################################
 
 # page shown on start, and when opening new tab without arguments
 config.set('url.start_pages', ['{{ qutebrowser_home_page }}'])
 config.set('url.default_page', '{{ qutebrowser_home_page }}')
-
 # default page-zoom-level (see zoom.levels settings for available levels)
 config.set('zoom.default', '{{ qutebrowser_default_page_zoom_level }}')
 
-################################################################################
-# MOUSE
-################################################################################
+# save open tabs, and restore them on next qutebrowser session
+config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs else 'False' }})
+# which tab to select when the focused tab is removed
+config.set('tabs.select_on_remove', '{{ qutebrowser_tab_select_on_remove }}')
+# vertical page-loading progress indicator bar placed to left of tab title text
+config.set('tabs.indicator.width', {{ qutebrowser_tab_indicator_bar_width_px }})
+# when a new tab is launched, open it in the background
+config.set('tabs.background', {{ 'True' if qutebrowser_open_new_tab_in_bg else 'False' }})
 
-# which mouse button to use to close tabs: 'right', 'middle', 'none'
-config.set('tabs.close_mouse_button', '{{ qutebrowser_close_tab_with_mouse_btn }}')
-
-# switch between tabs using the mouse wheel
-config.set('tabs.mousewheel_switching', {{ 'True' if qutebrowser_switch_tabs_with_mouse_wheel else 'False' }})
-
-################################################################################
-# SEARCH
-################################################################################
+# show a scrollbar
+config.set('scrolling.bar', '{{ qutebrowser_show_scrollbar }}')
 
 # list of hotkey-to-search-provider maps, used in cmd mode
 # Note: the first row in this list serves as the default provider
@@ -184,4 +149,9 @@ config.set('url.searchengines', {
   '{{ provider.hotkeys }}': '{{ provider.search_url | replace("%s", "{}") }}',
 {% endfor %}
 })
+
+# which mouse button to use to close tabs: 'right', 'middle', 'none'
+config.set('tabs.close_mouse_button', '{{ qutebrowser_close_tab_with_mouse_btn }}')
+# switch between tabs using the mouse wheel
+config.set('tabs.mousewheel_switching', {{ 'True' if qutebrowser_switch_tabs_with_mouse_wheel else 'False' }})
 

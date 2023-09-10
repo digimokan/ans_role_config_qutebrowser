@@ -1,6 +1,0 @@
-# page shown on start, and when opening new tab without arguments
-qutebrowser_home_page: 'https://www.duckduckgo.com'
-
-# default page-zoom-level (see zoom.levels settings for available levels)
-qutebrowser_default_page_zoom_level: '135%'
-

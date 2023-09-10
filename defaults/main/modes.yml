@@ -1,6 +1,0 @@
-# number of items to save in cmd mode history (0 for none, -1 for unlimited)
-qutebrowser_cmd_mode_history_max_items: 0
-
-# forward unbound keys to web page: 'all', 'none', 'auto' (fwd non-alphanumeric)
-qutebrowser_normal_mode_unbound_key_fwd: 'none'
-

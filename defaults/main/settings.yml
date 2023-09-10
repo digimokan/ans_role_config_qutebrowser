@@ -1,0 +1,32 @@
+# number of items to save in cmd mode history (0 for none, -1 for unlimited)
+qutebrowser_cmd_mode_history_max_items: 0
+# forward unbound keys to web page: 'all', 'none', 'auto' (fwd non-alphanumeric)
+qutebrowser_normal_mode_unbound_key_fwd: 'none'
+
+# page shown on start, and when opening new tab without arguments
+qutebrowser_home_page: 'https://www.duckduckgo.com'
+# default page-zoom-level (see zoom.levels settings for available levels)
+qutebrowser_default_page_zoom_level: '135%'
+
+# save open tabs, and restore them on next qutebrowser session
+qutebrowser_save_and_restore_tabs: true
+# which tab to select when focused tab is removed: 'prev', 'next', 'last-used'
+qutebrowser_tab_select_on_remove: 'last-used'
+# vertical page-loading progress bar placed left of tab title text (0 to hide)
+qutebrowser_tab_indicator_bar_width_px: 0
+# when a new tab is launched, open it in the background
+qutebrowser_open_new_tab_in_bg: false
+
+# show scrollbar: 'always', 'never', 'when-searching', 'overlay' (periodically)
+qutebrowser_show_scrollbar: 'always'
+
+# list of hotkey-to-search-provider maps, used in cmd mode (first is default)
+qutebrowser_search_providers:
+  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
+  - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
+
+# which mouse button to use to close tabs: 'right', 'middle', 'none'
+qutebrowser_close_tab_with_mouse_btn: 'none'
+# switch between tabs using the mouse wheel
+qutebrowser_switch_tabs_with_mouse_wheel: false
+
