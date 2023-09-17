@@ -167,15 +167,11 @@ config.set('bindings.default', {})
 # enter a special mode from page (aka 'normal') mode
 config.bind('{{ qutebrowser_keymap_enter_cmd_mode }}', 'set-cmd-text :')
 config.bind('{{ qutebrowser_keymap_enter_insert_mode }}', 'mode-enter insert')
-config.bind('{{ qutebrowser_keymap_enter_caret_mode }}', 'mode-enter caret')
 config.bind('{{ qutebrowser_keymap_enter_passthrough_mode }}', 'mode-enter passthrough')
 
 # exit a special mode and return to page (aka 'normal') mode
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='command')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='insert')
-# config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}',
-#             'mode-leave ;; jseval -q document.activeElement.blur()', mode='insert')
-config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='caret')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='passthrough')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='hint')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='prompt')
