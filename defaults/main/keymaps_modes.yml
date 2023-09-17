@@ -1,0 +1,9 @@
+# enter a special mode from page (aka 'normal') mode
+qutebrowser_keymap_enter_cmd_mode: ';'
+qutebrowser_keymap_enter_insert_mode: 'i'
+qutebrowser_keymap_enter_caret_mode: 'v'
+qutebrowser_keymap_enter_passthrough_mode: '<Ctrl-V>'
+
+# exit a special mode and return to page (aka 'normal') mode
+qutebrowser_keymap_exit_to_page_mode: '<Escape>'
+

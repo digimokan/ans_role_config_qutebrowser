@@ -158,9 +158,23 @@ config.set('tabs.close_mouse_button', '{{ qutebrowser_close_tab_with_mouse_btn }
 config.set('tabs.mousewheel_switching', {{ 'True' if qutebrowser_switch_tabs_with_mouse_wheel else 'False' }})
 
 ################################################################################
-# KEYMAPS
+# KEYMAPS: MODES
 ################################################################################
 
-# clear all default keymaps
-config.set('bindings.default', {})
+# enter a special mode from page (aka 'normal') mode
+config.bind('{{ qutebrowser_keymap_enter_cmd_mode }}', 'set-cmd-text :')
+config.bind('{{ qutebrowser_keymap_enter_insert_mode }}', 'enter-mode insert')
+config.bind('{{ qutebrowser_keymap_enter_caret_mode }}', 'enter-mode caret')
+config.bind('{{ qutebrowser_keymap_enter_passthrough_mode }}', 'enter-mode passthrough')
+
+# exit a special mode and return to page (aka 'normal') mode
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='command')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='insert')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='caret')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='passthrough')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='hint')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='prompt')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'leave-mode', mode='yesno')
+config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}',
+            'clear-keychain ;; search ;; fullscreen --leave ;; fake-key <Escape>', mode='normal')
 
