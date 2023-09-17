@@ -128,6 +128,8 @@ config.set('url.start_pages', ['{{ qutebrowser_home_page }}'])
 config.set('url.default_page', '{{ qutebrowser_home_page }}')
 # default page-zoom-level (see zoom.levels settings for available levels)
 config.set('zoom.default', '{{ qutebrowser_default_page_zoom_level }}')
+# accept cookies: 'all', 'never', 'no-3rdparty', 'no-unknown-3rdparty'
+config.set('content.cookies.accept', '{{ qutebrowser_cookie_accept_level }}')
 
 # save open tabs, and restore them on next qutebrowser session
 config.set('auto_save.session', {{ 'True' if qutebrowser_save_and_restore_tabs else 'False' }})

@@ -7,6 +7,8 @@ qutebrowser_normal_mode_unbound_key_fwd: 'none'
 qutebrowser_home_page: 'https://www.duckduckgo.com'
 # default page-zoom-level (see zoom.levels settings for available levels)
 qutebrowser_default_page_zoom_level: '135%'
+# accept cookies: 'all', 'never', 'no-3rdparty', 'no-unknown-3rdparty'
+qutebrowser_cookie_accept_level: 'no-3rdparty'
 
 # save open tabs, and restore them on next qutebrowser session
 qutebrowser_save_and_restore_tabs: true
