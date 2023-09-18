@@ -1,0 +1,20 @@
+qutebrowser_keymap_move_down: 'j'
+qutebrowser_keymap_move_up: 'k'
+qutebrowser_keymap_page_down: '<PgDown>'
+qutebrowser_keymap_page_up: '<PgUp>'
+qutebrowser_keymap_move_left: 'H'
+qutebrowser_keymap_move_right: 'L'
+
+qutebrowser_keymap_move_to_page_top: 'gg'
+qutebrowser_keymap_move_to_page_bottom: 'G'
+
+qutebrowser_keymap_reload_tab: 'r'
+qutebrowser_keymap_reload_tab_with_cache_clear: 'R'
+qutebrowser_keymap_reload_stop_page_load: 's'
+
+qutebrowser_keymap_back_to_last_page: 'h'
+qutebrowser_keymap_fwd_to_next_page: 'l'
+
+qutebrowser_keymap_next_seq_page: ']'
+qutebrowser_keymap_prev_seq_page: '['
+

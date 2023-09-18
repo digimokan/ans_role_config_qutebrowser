@@ -1,0 +1,13 @@
+qutebrowser_keymap_tab_next: '.'
+qutebrowser_keymap_tab_prev: ','
+qutebrowser_keymap_tab_move_left: '<'
+qutebrowser_keymap_tab_move_right: '>'
+
+qutebrowser_keymap_open_in_tab: 't'
+qutebrowser_keymap_open_in_private_tab: 'T'
+
+qutebrowser_keymap_duplicate_tab: 'yt'
+
+qutebrowser_keymap_tab_close: 'x'
+qutebrowser_keymap_tab_undo_close: 'X'
+

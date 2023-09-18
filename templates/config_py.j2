@@ -162,14 +162,15 @@ config.set('tabs.mousewheel_switching', {{ 'True' if qutebrowser_switch_tabs_wit
 ################################################################################
 
 # clear all default keymaps
+
 config.set('bindings.default', {})
 
-# enter a special mode from page (aka 'normal') mode
-config.bind('{{ qutebrowser_keymap_enter_cmd_mode }}', 'set-cmd-text :')
+# Modes
+
+config.bind('{{ qutebrowser_keymap_enter_cmd_mode }}', 'cmd-set-text --space :')
 config.bind('{{ qutebrowser_keymap_enter_insert_mode }}', 'mode-enter insert')
 config.bind('{{ qutebrowser_keymap_enter_passthrough_mode }}', 'mode-enter passthrough')
 
-# exit a special mode and return to page (aka 'normal') mode
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='command')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='insert')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='passthrough')
@@ -178,4 +179,56 @@ config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='pr
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}', 'mode-leave', mode='yesno')
 config.bind('{{ qutebrowser_keymap_exit_to_page_mode }}',
             'clear-keychain ;; search ;; fullscreen --leave ;; fake-key <Escape>', mode='normal')
+
+# Navigation
+
+config.bind('{{ qutebrowser_keymap_move_down }}', 'scroll-px 0 60')
+config.bind('{{ qutebrowser_keymap_move_up }}', 'scroll-px 0 -60')
+config.bind('{{ qutebrowser_keymap_page_down }}', 'scroll-page 0 1')
+config.bind('{{ qutebrowser_keymap_page_up }}', 'scroll-page 0 -1')
+config.bind('{{ qutebrowser_keymap_move_left }}', 'scroll-px -60 0')
+config.bind('{{ qutebrowser_keymap_move_right }}', 'scroll-px 60 0')
+
+config.bind('{{ qutebrowser_keymap_move_to_page_top }}', 'scroll-to-perc 0')
+config.bind('{{ qutebrowser_keymap_move_to_page_bottom }}', 'scroll-to-perc')
+
+config.bind('{{ qutebrowser_keymap_reload_tab }}', 'reload')
+config.bind('{{ qutebrowser_keymap_reload_tab_with_cache_clear }}', 'reload --force')
+config.bind('{{ qutebrowser_keymap_reload_stop_page_load }}', 'stop')
+
+config.bind('{{ qutebrowser_keymap_back_to_last_page }}', 'back')
+config.bind('{{ qutebrowser_keymap_fwd_to_next_page }}', 'forward')
+
+config.bind('{{ qutebrowser_keymap_next_seq_page }}', 'navigate next')
+config.bind('{{ qutebrowser_keymap_prev_seq_page }}', 'navigate prev')
+
+# Tabs
+
+config.bind('{{ qutebrowser_keymap_tab_next }}', 'tab-next')
+config.bind('{{ qutebrowser_keymap_tab_prev }}', 'tab-prev')
+config.bind('{{ qutebrowser_keymap_tab_move_left }}', 'tab-move -')
+config.bind('{{ qutebrowser_keymap_tab_move_right }}', 'tab-move +')
+
+config.bind('{{ qutebrowser_keymap_open_in_tab }}', 'cmd-set-text --space :open --tab')
+config.bind('{{ qutebrowser_keymap_open_in_private_tab }}', 'cmd-set-text --space :open --tab --private')
+
+config.bind('{{ qutebrowser_keymap_duplicate_tab }}', 'tab-clone')
+
+config.bind('{{ qutebrowser_keymap_tab_close }}', 'tab-close')
+config.bind('{{ qutebrowser_keymap_tab_undo_close }}', 'undo')
+
+# Hints
+
+config.bind('{{ qutebrowser_keymap_hint_follow_link }}', 'hint all normal')
+config.bind('{{ qutebrowser_keymap_hint_follow_link_in_tab }}', 'hint all tab')
+
+config.bind('{{ qutebrowser_keymap_hint_hover }}', 'hint all hover')
+
+config.bind('{{ qutebrowser_keymap_hint_input_fields }}', 'hint inputs normal')
+
+# Search
+
+config.bind('{{ qutebrowser_keymap_search_page_text }}', 'cmd-set-text /')
+config.bind('{{ qutebrowser_keymap_next_search_hit }}', 'search-next')
+config.bind('{{ qutebrowser_keymap_prev_search_hit }}', 'search-prev')
 
