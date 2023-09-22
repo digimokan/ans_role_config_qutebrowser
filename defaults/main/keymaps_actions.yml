@@ -1,0 +1,16 @@
+qutebrowser_keymap_bookmark_current_url: 'B'
+
+qutebrowser_keymap_yank_current_url: 'yy'
+
+qutebrowser_keymap_cancel_all_downloads: 'dx'
+qutebrowser_keymap_clear_finished_downloads: 'dc'
+qutebrowser_keymap_retry_failed_downloads: 'dr'
+
+qutebrowser_keymap_page_zoom_in: '<Up>'
+qutebrowser_keymap_page_zoom_out: '<Down>'
+qutebrowser_keymap_page_zoom_reset: '='
+
+qutebrowser_keymap_print_page: '<Ctrl-P>'
+
+qutebrowser_keymap_quit_app: '<Ctrl-Backspace>'
+
