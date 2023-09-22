@@ -256,3 +256,21 @@ config.bind('{{ qutebrowser_keymap_search_page_text }}', 'set-cmd-text /')
 config.bind('{{ qutebrowser_keymap_next_search_hit }}', 'search-next')
 config.bind('{{ qutebrowser_keymap_prev_search_hit }}', 'search-prev')
 
+# Mode Operations
+
+config.bind('<Return>', 'command-accept', mode='command')
+config.bind('<Down>', 'completion-item-focus next', mode='command')
+config.bind('<Up>', 'completion-item-focus prev', mode='command')
+
+config.bind('<Return>', 'prompt-accept', mode='prompt')
+config.bind('<Right>', 'prompt-item-focus next', mode='prompt')
+config.bind('<Down>', 'prompt-item-focus next', mode='prompt')
+config.bind('<Left>', 'prompt-item-focus prev', mode='prompt')
+config.bind('<Up>', 'prompt-item-focus prev', mode='prompt')
+config.bind('y', 'prompt-accept yes', mode='prompt')
+config.bind('n', 'prompt-accept no', mode='prompt')
+
+config.bind('<Return>', 'prompt-accept', mode='yesno')
+config.bind('y', 'prompt-accept yes', mode='yesno')
+config.bind('n', 'prompt-accept no', mode='yesno')
+
