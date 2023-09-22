@@ -223,7 +223,7 @@ config.bind('{{ qutebrowser_keymap_page_zoom_reset }}', 'zoom')
 
 config.bind('{{ qutebrowser_keymap_print_page }}', 'print')
 
-config.bind('{{ qutebrowser_keymap_quit_app }}', 'quit --save')
+config.bind('{{ qutebrowser_keymap_close_window }}', 'close')
 
 # Tabs
 
@@ -233,7 +233,7 @@ config.bind('{{ qutebrowser_keymap_tab_move_left }}', 'tab-move -')
 config.bind('{{ qutebrowser_keymap_tab_move_right }}', 'tab-move +')
 
 config.bind('{{ qutebrowser_keymap_open_in_tab }}', 'set-cmd-text --space :open --tab')
-config.bind('{{ qutebrowser_keymap_open_in_private_tab }}', 'set-cmd-text --space :open --tab --private')
+config.bind('{{ qutebrowser_keymap_open_in_private_tab }}', 'set-cmd-text --space :open --private')
 
 config.bind('{{ qutebrowser_keymap_duplicate_tab }}', 'tab-clone')
 config.bind('{{ qutebrowser_keymap_open_clipboard_url_in_tab }}', 'open --tab -- {clipboard}')

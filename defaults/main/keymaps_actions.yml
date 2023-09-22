@@ -12,5 +12,5 @@ qutebrowser_keymap_page_zoom_reset: '='
 
 qutebrowser_keymap_print_page: '<Ctrl-P>'
 
-qutebrowser_keymap_quit_app: '<Ctrl-Backspace>'
+qutebrowser_keymap_close_window: '<Ctrl-Backspace>'
 
