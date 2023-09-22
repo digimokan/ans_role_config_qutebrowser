@@ -7,6 +7,7 @@ qutebrowser_keymap_open_in_tab: 't'
 qutebrowser_keymap_open_in_private_tab: 'T'
 
 qutebrowser_keymap_duplicate_tab: 'yt'
+qutebrowser_keymap_open_clipboard_url_in_tab: 'yo'
 
 qutebrowser_keymap_tab_close: 'x'
 qutebrowser_keymap_tab_undo_close: 'X'

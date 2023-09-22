@@ -202,6 +202,11 @@ config.bind('{{ qutebrowser_keymap_fwd_to_next_page }}', 'forward')
 config.bind('{{ qutebrowser_keymap_next_seq_page }}', 'navigate next')
 config.bind('{{ qutebrowser_keymap_prev_seq_page }}', 'navigate prev')
 
+config.bind('{{ qutebrowser_keymap_jump_url_parent_dir }}', 'navigate up')
+config.bind('{{ qutebrowser_keymap_jump_bookmarks_page }}', 'open --tab qute://bookmarks#bookmarks')
+config.bind('{{ qutebrowser_keymap_jump_browse_history }}', 'open --tab qute://history')
+config.bind('{{ qutebrowser_keymap_jump_page_source }}', 'view-source')
+
 # Tabs
 
 config.bind('{{ qutebrowser_keymap_tab_next }}', 'tab-next')
@@ -213,6 +218,7 @@ config.bind('{{ qutebrowser_keymap_open_in_tab }}', 'set-cmd-text --space :open 
 config.bind('{{ qutebrowser_keymap_open_in_private_tab }}', 'set-cmd-text --space :open --tab --private')
 
 config.bind('{{ qutebrowser_keymap_duplicate_tab }}', 'tab-clone')
+config.bind('{{ qutebrowser_keymap_open_clipboard_url_in_tab }}', 'open --tab -- {clipboard}')
 
 config.bind('{{ qutebrowser_keymap_tab_close }}', 'tab-close')
 config.bind('{{ qutebrowser_keymap_tab_undo_close }}', 'undo')
