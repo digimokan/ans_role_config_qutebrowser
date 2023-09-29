@@ -1,5 +1,7 @@
 # list of quickmark sites
-qutebrowser_quickmarks_url_list:
-  - { name: "Shell Haters", url: "https://shellhaters.org" }
-  - { name: "Github Digimokan", url: "https://github.com/digimokan" }
+# qutebrowser_quickmarks_url_list:
+#   - { name: "Shell Haters", url: "https://shellhaters.org" }
+#   - { name: "Github Digimokan", url: "https://github.com/digimokan" }
+
+qutebrowser_quickmarks_url_list: [ { name: "Shell Haters", url: "https://shellhaters.org" }, { name: "Github Digimokan", url: "https://github.com/digimokan" } ]
 
