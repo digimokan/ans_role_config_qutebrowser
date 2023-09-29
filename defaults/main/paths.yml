@@ -1,8 +1,9 @@
 # main qutebrowser config dir
 qutebrowser_user_config_dir: "/home/{{ qutebrowser_user_name }}/.config/qutebrowser"
 
-# main qutebrowser config file path
+# qutebrowser config file paths
 qutebrowser_user_config_file_path: "{{ qutebrowser_user_config_dir }}/config.py"
+qutebrowser_quickmarks_file_path: "{{ qutebrowser_user_config_dir }}/quickmarks"
 
 # qutebrowser will download files to this directory
 qutebrowser_user_download_dir: "/home/{{ qutebrowser_user_name }}/Downloads"
