@@ -3,20 +3,21 @@
     path: "{{ qutebrowser_user_browse_history_db_path }}"
   register: main_db_stats
 
-- name: "Get file stats of user-provided browse history db at {{ qutebrowser_try_link_to_existing_history_db_path }}"
+- name: "Get file stats of saved browse history db at {{ qutebrowser_try_link_to_existing_history_db_path }}"
   ansible.builtin.stat:
     path: "{{ qutebrowser_try_link_to_existing_history_db_path }}"
-  register: persist_db_stats
+  register: saved_db_stats
 
-# testing!!!!!
-- name: "Print stats of default qutebrowser browse history db file, if it exists and is symlink"
-  ansible.builtin.debug:
-    msg: "{{ qutebrowser_user_browse_history_db_path }} exists and is symlink!!"
-  when: (main_db_stats.stat.exists and main_db_stats.stat.islnk)
-
-# testing!!!!!
-- name: "Print stats of optional, persistent, user-provided, existing db file"
-  ansible.builtin.debug:
-    msg: "{{ qutebrowser_try_link_to_existing_history_db_path }} does not exist!!"
-  when: not persist_db_stats.stat.exists
+- name: "Before symlinking to saved db, make backup copy of {{ qutebrowser_user_browse_history_db_path }}"
+  ansible.builtin.copy:
+    src: "{{ qutebrowser_user_browse_history_db_path }}"
+    dest: "{{ qutebrowser_user_browse_history_db_path }}.ansible_bkup"
+    owner: "{{ qutebrowser_user_name }}"
+    group: "{{ qutebrowser_user_name }}"
+    mode: '0644'
+  become: true
+  become_user: root
+  when: (main_db_stats.stat.exists) and
+        (not main_db_stats.stat.islnk) and
+        (saved_db_stats.stat.exists)
 
