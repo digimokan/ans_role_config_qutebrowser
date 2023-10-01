@@ -1,0 +1,12 @@
+- name: "Create user qutebrowser cache dir at '{{ cache_dir }}'"
+  ansible.builtin.file:
+    path: "{{ cache_dir }}"
+    state: directory
+    owner: "{{ qutebrowser_user_name }}"
+    group: "{{ qutebrowser_user_name }}"
+    mode: '700'
+  vars:
+    cache_dir: "{{ qutebrowser_user_browse_history_db_path | ansible.builtin.dirname }}"
+  become: true
+  become_user: root
+

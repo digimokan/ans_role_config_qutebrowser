@@ -1,32 +1,6 @@
-- name: "Create user qutebrowser config dir at '{{ qutebrowser_user_config_dir }}'"
-  ansible.builtin.file:
-    path: "{{ qutebrowser_user_config_dir }}"
-    state: directory
-    owner: "{{ qutebrowser_user_name }}"
-    group: "{{ qutebrowser_user_name }}"
-    mode: '755'
-  become: true
-  become_user: root
+- name: "Configure main qutebrowser settings, and set up quickmarks file"
+  ansible.builtin.include_tasks: settings_and_quickmarks.yml
 
-- name: "Configure user qutebrowser settings in '{{ qutebrowser_user_config_file_path }}'"
-  ansible.builtin.template:
-    dest: "{{ qutebrowser_user_config_file_path }}"
-    src: "config_py.j2"
-    owner: "{{ qutebrowser_user_name }}"
-    group: "{{ qutebrowser_user_name }}"
-    mode: '644'
-    force: yes
-  become: true
-  become_user: root
-
-- name: "Configure user qutebrowser quickmark urls in '{{ qutebrowser_quickmarks_file_path }}'"
-  ansible.builtin.template:
-    dest: "{{ qutebrowser_quickmarks_file_path }}"
-    src: "quickmarks.j2"
-    owner: "{{ qutebrowser_user_name }}"
-    group: "{{ qutebrowser_user_name }}"
-    mode: '644'
-    force: yes
-  become: true
-  become_user: root
+- name: "Try to set up a link to existing user browse history database file"
+  ansible.builtin.include_tasks: browse_history.yml
 
