@@ -24,11 +24,11 @@
 - name: "Print stats of default qutebrowser browse history db file, if it exists"
   ansible.builtin.debug:
     msg: "{{ qutebrowser_user_browse_history_db_path }} exists!!"
-  when: main_db_stats.exists
+  when: main_db_stats.stat.exists
 
 # testing!!!!!
 - name: "Print stats of optional, persistent, user-provided, existing db file"
   ansible.builtin.debug:
     msg: "{{ qutebrowser_try_link_to_existing_history_db_path }} does not exist!!"
-  when: not persist_db_stats.exists
+  when: not persist_db_stats.stat.exists
 
