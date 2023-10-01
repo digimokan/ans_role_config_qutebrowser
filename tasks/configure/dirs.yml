@@ -14,7 +14,7 @@
     state: directory
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
-    mode: '700'
+    mode: '755'
   vars:
     cache_dir: "{{ qutebrowser_user_browse_history_db_path | ansible.builtin.dirname }}"
   become: true
