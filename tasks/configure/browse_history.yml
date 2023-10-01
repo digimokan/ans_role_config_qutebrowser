@@ -21,11 +21,15 @@
         (not default_db_stats.stat.islnk) and
         (saved_db_stats.stat.exists)
 
-# - name: "Symlink default db at '{{  }}' to saved db at '{{  }}'"
-#   ansible.builtin.file:
-#     src: /file/to/link/to
-#     dest: /path/to/symlink
-#     owner: foo
-#     group: foo
-#     state: link
+- name: "Symlink default db '{{ qutebrowser_default_browse_history_db_path }}' to saved db '{{ qutebrowser_try_link_to_saved_history_db_path }}'"
+  ansible.builtin.file:
+    src: "{{ qutebrowser_try_link_to_saved_history_db_path }}"
+    dest: "{{ qutebrowser_default_browse_history_db_path }}"
+    owner: "{{ qutebrowser_user_name }}"
+    group: "{{ qutebrowser_user_name }}"
+    mode: '0644'
+    state: link
+  become: true
+  become_user: root
+  when: saved_db_stats.stat.exists
 
