@@ -1,21 +1,9 @@
-- name: "Create user qutebrowser cache dir at '{{ cache_dir }}'"
-  ansible.builtin.file:
-    path: "{{ cache_dir }}"
-    state: directory
-    owner: "{{ qutebrowser_user_name }}"
-    group: "{{ qutebrowser_user_name }}"
-    mode: '700'
-  vars:
-    cache_dir: "{{ qutebrowser_user_browse_history_db_path | ansible.builtin.dirname }}"
-  become: true
-  become_user: root
-
-- name: "Get file stats of default qutebrowser browse history db file"
+- name: "Get file stats of default browse history db at {{ qutebrowser_user_browse_history_db_path }}"
   ansible.builtin.stat:
     path: "{{ qutebrowser_user_browse_history_db_path }}"
   register: main_db_stats
 
-- name: "Get file stats of optional, persistent, user-provided, existing db file"
+- name: "Get file stats of user-provided browse history db at {{ qutebrowser_try_link_to_existing_history_db_path }}"
   ansible.builtin.stat:
     path: "{{ qutebrowser_try_link_to_existing_history_db_path }}"
   register: persist_db_stats

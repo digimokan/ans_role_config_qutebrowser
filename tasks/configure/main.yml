@@ -1,3 +1,6 @@
+- name: "Create qutebrowser user config dirs"
+  ansible.builtin.include_tasks: dirs.yml
+
 - name: "Configure main qutebrowser settings, and set up quickmarks file"
   ansible.builtin.include_tasks: settings_and_quickmarks.yml
 

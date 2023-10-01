@@ -1,13 +1,3 @@
-- name: "Create user qutebrowser config dir at '{{ qutebrowser_user_config_dir }}'"
-  ansible.builtin.file:
-    path: "{{ qutebrowser_user_config_dir }}"
-    state: directory
-    owner: "{{ qutebrowser_user_name }}"
-    group: "{{ qutebrowser_user_name }}"
-    mode: '755'
-  become: true
-  become_user: root
-
 - name: "Configure user qutebrowser settings in '{{ qutebrowser_user_config_file_path }}'"
   ansible.builtin.template:
     dest: "{{ qutebrowser_user_config_file_path }}"
