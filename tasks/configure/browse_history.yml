@@ -1,23 +1,31 @@
-- name: "Get file stats of default browse history db at {{ qutebrowser_user_browse_history_db_path }}"
+- name: "Get file stats of default browse history db at '{{ qutebrowser_default_browse_history_db_path }}'"
   ansible.builtin.stat:
-    path: "{{ qutebrowser_user_browse_history_db_path }}"
-  register: main_db_stats
+    path: "{{ qutebrowser_default_browse_history_db_path }}"
+  register: default_db_stats
 
-- name: "Get file stats of saved browse history db at {{ qutebrowser_try_link_to_existing_history_db_path }}"
+- name: "Get file stats of saved browse history db at '{{ qutebrowser_try_link_to_saved_history_db_path }}'"
   ansible.builtin.stat:
-    path: "{{ qutebrowser_try_link_to_existing_history_db_path }}"
+    path: "{{ qutebrowser_try_link_to_saved_history_db_path }}"
   register: saved_db_stats
 
-- name: "Before symlinking to saved db, make backup copy of {{ qutebrowser_user_browse_history_db_path }}"
+- name: "Before symlinking to saved db, make backup copy of default db '{{ qutebrowser_default_browse_history_db_path }}'"
   ansible.builtin.copy:
-    src: "{{ qutebrowser_user_browse_history_db_path }}"
-    dest: "{{ qutebrowser_user_browse_history_db_path }}.ansible_bkup"
+    src: "{{ qutebrowser_default_browse_history_db_path }}"
+    dest: "{{ qutebrowser_default_browse_history_db_path }}.ansible_bkup"
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
     mode: '0644'
   become: true
   become_user: root
-  when: (main_db_stats.stat.exists) and
-        (not main_db_stats.stat.islnk) and
+  when: (default_db_stats.stat.exists) and
+        (not default_db_stats.stat.islnk) and
         (saved_db_stats.stat.exists)
+
+# - name: "Symlink default db at '{{  }}' to saved db at '{{  }}'"
+#   ansible.builtin.file:
+#     src: /file/to/link/to
+#     dest: /path/to/symlink
+#     owner: foo
+#     group: foo
+#     state: link
 

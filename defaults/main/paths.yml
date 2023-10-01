@@ -8,8 +8,8 @@ qutebrowser_quickmarks_file_path: "{{ qutebrowser_user_config_dir }}/quickmarks"
 # qutebrowser will download files to this directory
 qutebrowser_user_download_dir: "/home/{{ qutebrowser_user_name }}/Downloads"
 
-# qutebrowser saves browse history in an sqlite database file
-qutebrowser_user_browse_history_db_path: "/home/{{ qutebrowser_user_name }}/.local/share/qutebrowser/history.sqlite"
-# try to make symlink from qutebrowser_user_browse_history_db_path to existing db
-qutebrowser_try_link_to_existing_history_db_path: ""
+# qutebrowser stores browse history in sqlite db file, at this default path
+qutebrowser_default_browse_history_db_path: "/home/{{ qutebrowser_user_name }}/.local/share/qutebrowser/history.sqlite"
+# try to make symlink from the default db to a saved db
+qutebrowser_try_link_to_saved_history_db_path: ""
 

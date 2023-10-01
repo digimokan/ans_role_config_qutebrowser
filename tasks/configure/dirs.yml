@@ -16,7 +16,7 @@
     group: "{{ qutebrowser_user_name }}"
     mode: '755'
   vars:
-    cache_dir: "{{ qutebrowser_user_browse_history_db_path | ansible.builtin.dirname }}"
+    cache_dir: "{{ qutebrowser_default_browse_history_db_path | ansible.builtin.dirname }}"
   become: true
   become_user: root
 
