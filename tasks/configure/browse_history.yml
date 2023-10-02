@@ -14,7 +14,7 @@
     dest: "{{ qutebrowser_default_browse_history_db_path }}.ansible_bkup"
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
-    mode: '0644'
+    mode: '644'
     force: true
     backup: true
   become: true
@@ -29,7 +29,7 @@
     dest: "{{ qutebrowser_default_browse_history_db_path }}"
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
-    mode: '0644'
+    mode: '644'
     state: link
     force: true
   become: true
