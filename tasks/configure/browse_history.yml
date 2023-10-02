@@ -31,6 +31,7 @@
     group: "{{ qutebrowser_user_name }}"
     mode: '0644'
     state: link
+    force: true
   become: true
   become_user: root
   when: saved_db_stats.stat.exists
