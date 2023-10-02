@@ -15,6 +15,8 @@
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
     mode: '0644'
+    force: true
+    backup: true
   become: true
   become_user: root
   when: (default_db_stats.stat.exists) and
