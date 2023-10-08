@@ -54,7 +54,7 @@ Install and configure the qutebrowser web-browser.
        - name: "Install and configure the qutebrowser web-browser"
          ansible.builtin.include_role:
            name: ans_role_config_qutebrowser
-           public: yes
+           public: true
         vars:
            qutebrowser_user_name: "user2"
    ```

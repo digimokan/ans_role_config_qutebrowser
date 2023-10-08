@@ -5,7 +5,7 @@
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
     mode: '644'
-    force: yes
+    force: true
   become: true
   become_user: root
 
@@ -16,7 +16,7 @@
     owner: "{{ qutebrowser_user_name }}"
     group: "{{ qutebrowser_user_name }}"
     mode: '644'
-    force: yes
+    force: true
   become: true
   become_user: root
 
