@@ -167,7 +167,7 @@ config.set('bindings.default', {})
 
 # Modes
 
-config.bind('{{ qutebrowser_keymap_enter_cmd_mode }}', 'set-cmd-text --space :')
+config.bind('{{ qutebrowser_keymap_enter_cmd_mode }}', 'cmd-set-text --space :')
 config.bind('{{ qutebrowser_keymap_enter_insert_mode }}', 'mode-enter insert')
 config.bind('{{ qutebrowser_keymap_enter_passthrough_mode }}', 'mode-enter passthrough')
 
@@ -232,8 +232,8 @@ config.bind('{{ qutebrowser_keymap_tab_prev }}', 'tab-prev')
 config.bind('{{ qutebrowser_keymap_tab_move_left }}', 'tab-move -')
 config.bind('{{ qutebrowser_keymap_tab_move_right }}', 'tab-move +')
 
-config.bind('{{ qutebrowser_keymap_open_in_tab }}', 'set-cmd-text --space :open --tab')
-config.bind('{{ qutebrowser_keymap_open_in_private_tab }}', 'set-cmd-text --space :open --private')
+config.bind('{{ qutebrowser_keymap_open_in_tab }}', 'cmd-set-text --space :open --tab')
+config.bind('{{ qutebrowser_keymap_open_in_private_tab }}', 'cmd-set-text --space :open --private')
 
 config.bind('{{ qutebrowser_keymap_duplicate_tab }}', 'tab-clone')
 config.bind('{{ qutebrowser_keymap_open_clipboard_url_in_tab }}', 'open --tab -- {clipboard}')
@@ -252,7 +252,7 @@ config.bind('{{ qutebrowser_keymap_hint_input_fields }}', 'hint inputs normal')
 
 # Search
 
-config.bind('{{ qutebrowser_keymap_search_page_text }}', 'set-cmd-text /')
+config.bind('{{ qutebrowser_keymap_search_page_text }}', 'cmd-set-text /')
 config.bind('{{ qutebrowser_keymap_next_search_hit }}', 'search-next')
 config.bind('{{ qutebrowser_keymap_prev_search_hit }}', 'search-prev')
 
